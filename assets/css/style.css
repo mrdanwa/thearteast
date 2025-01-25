@@ -13,9 +13,10 @@
   --color-bg: #fbfef9; /* Light background */
   --color-text: #191923; /* Dark for text */
   --color-accent1: #bf1363; /* Pink/red accent */
-  --color-accent2: #0e79b2; /* Blue accent */
+  --color-accent2: #f37237; /* Orange accent */
   --color-accent3: #a179a4; /* Purple accent */
   --color-accent4: #397f78; /* Teal accent */
+  --color-accent5: #0e79b2; /* Blue accent */
 
   /* Basic black/white and some grays */
   --color-white: #ffffff;
@@ -486,7 +487,7 @@ p {
 }
 
 .home-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -506,7 +507,7 @@ p {
 }
 
 .home-hero-2 {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -526,7 +527,7 @@ p {
 }
 
 .home-hero-3 {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -546,7 +547,7 @@ p {
 }
 
 .home-hero-4 {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -619,7 +620,7 @@ ul.caption-slides li {
 /***********************************************************************************************/
 
 .about-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -922,7 +923,7 @@ a:hover .overlay .overlay-inner span {
 /***********************************************************************************************/
 
 .clients-bg {
-  background: url("../images/hero-bg/landing.png") center top;
+  background: url("../images/hero-bg/landing.jpg") center top;
   position: relative;
   padding: 60px 0;
 }
@@ -964,7 +965,7 @@ a:hover .overlay .overlay-inner span {
 /***********************************************************************************************/
 
 #statistic-section {
-  background: url("../images/hero-bg/landing.png") center top;
+  background: url("../images/hero-bg/landing.jpg") center top;
   position: relative;
   text-align: center;
   padding-top: 70px;
@@ -1123,7 +1124,7 @@ span.percentfactor {
 /***********************************************************************************************/
 
 .services-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -1162,7 +1163,7 @@ span.percentfactor {
 }
 
 #banner-services {
-  background: url("../images/hero-bg/landing.png") center top;
+  background: url("../images/hero-bg/landing.jpg") center top;
   position: relative;
   border-bottom: 1px solid transparent;
 }
@@ -1172,7 +1173,8 @@ span.percentfactor {
   content: "";
   top: 0;
   left: 0;
-  background: rgba(5, 5, 5, 0.8);
+  background: var(--color-accent2);
+  opacity: 0.9;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -1317,7 +1319,7 @@ ul.price-table li .btn {
 /***********************************************************************************************/
 
 .portfolio-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -1571,7 +1573,7 @@ textarea.form-control {
 #project-head-section {
   padding: 80px 0;
   position: relative;
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
 }
 
 #project-head-section:before {
@@ -1823,7 +1825,7 @@ ul.features-list li {
 ----------------------*/
 
 #video-section {
-  background: url("../images/hero-bg/landing.png") center top;
+  background: url("../images/hero-bg/landing.jpg") center top;
   position: relative;
   padding: 100px 0;
 }
@@ -1833,7 +1835,7 @@ ul.features-list li {
   content: "";
   top: 0;
   left: 0;
-  background: var(--color-accent2);
+  background: rgba(5, 5, 5, 0.8);
   opacity: 0.9;
   width: 100%;
   height: 100%;
@@ -2070,7 +2072,7 @@ ul.testimonials-slider li p {
 
 #blog-head {
   position: relative;
-  background: url("../images/hero-bg/landing.png") center top;
+  background: url("../images/hero-bg/landing.jpg") center top;
   padding: 80px 0 !important;
 }
 
@@ -2514,7 +2516,7 @@ label {
 /***********************************************************************************************/
 
 .app-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -2605,7 +2607,7 @@ ul.features-app-list li {
 }
 
 #perfect-section {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
   padding: 80px 0;
   position: relative;
@@ -2651,7 +2653,7 @@ ul.features-app-list li {
   position: relative;
   padding: 60px;
   background-size: cover;
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
 }
 
 #download-section:before {
@@ -2727,7 +2729,7 @@ ul.download li a img {
 /***********************************************************************************************/
 
 .soon-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -2781,7 +2783,7 @@ ul.download li a img {
 /***********************************************************************************************/
 
 .personal-hero {
-  background: url("../images/hero-bg/landing.png");
+  background: url("../images/hero-bg/landing.jpg");
   background-size: cover;
 }
 
@@ -3232,7 +3234,7 @@ p.copyright {
 }
 
 .platform-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
