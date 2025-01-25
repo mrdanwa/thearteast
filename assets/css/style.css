@@ -1730,7 +1730,6 @@ ul.details-list li:last-child {
 .landing-hero {
   background: url("../images/hero-bg/image.png");
   background-size: cover;
-  background-attachment: scroll;
 }
 
 /*--------------------
