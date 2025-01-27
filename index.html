@@ -9,6 +9,21 @@
     />
     <title>The Arteast Agency</title>
 
+    <!-- Metadatos -->
+    <meta
+      name="description"
+      content="The Arteast Agency es la primera agencia de marketing digital en España especializada en el mercado chino. Ofrecemos servicios de redes sociales, SEO, SEM, consultoría y más para ayudarte a crecer en el mercado chino."
+    />
+    <meta
+      name="keywords"
+      content="marketing digital, mercado chino, SEO, SEM, redes sociales, consultoría, expansión internacional, The Arteast Agency, creatividad, marketing estratégico, España y China"
+    />
+    <meta name="author" content="The Arteast Agency" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo1.png" type="image/x-icon" />
+
     <!-- Fuentes de Google -->
     <link
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
@@ -586,6 +601,7 @@
                       </div>
                     </div>
                   </li>
+                </ul>
               </div>
 
               <div
@@ -1130,12 +1146,16 @@
       <section>
         <div class="contact-info">
           <div class="container">
-            <div class="row" style="display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 30px;
-              flex-wrap: wrap;
-            ">
+            <div
+              class="row"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+              "
+            >
               <div class="col-sm-4">
                 <a
                   ><i class="pe-7s-map-marker"></i> Shanghai / Madrid /
@@ -1161,17 +1181,23 @@
               <div class="col-sm-8 col-sm-offset-2">
                 <ul class="footer-social-links">
                   <li>
-                    <a href="https://www.facebook.com/thearteastagency/" target="_blank"
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61572720230650/"
+                      target="_blank"
                       >Facebook</a
                     >
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/thearteastagency/" target="_blank"
+                    <a
+                      href="https://www.instagram.com/thearteastagency/"
+                      target="_blank"
                       >Instagram</a
                     >
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/thearteastagency/" target="_blank"
+                    <a
+                      href="https://www.linkedin.com/company/the-arteast-agency/"
+                      target="_blank"
                       >LinkedIn</a
                     >
                   </li>
@@ -1215,22 +1241,22 @@
     <script src="assets/js/jquery.gmaps.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const fixedHeader = document.querySelector('.fixed-header');
-        const heroSection = document.querySelector('#hero-section');
-        
-        window.addEventListener('scroll', function() {
+      document.addEventListener("DOMContentLoaded", function () {
+        const fixedHeader = document.querySelector(".fixed-header");
+        const heroSection = document.querySelector("#hero-section");
+
+        window.addEventListener("scroll", function () {
           if (heroSection) {
             const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            
+
             if (window.pageYOffset > heroBottom - 100) {
-              fixedHeader.classList.add('scrolled');
+              fixedHeader.classList.add("scrolled");
             } else {
-              fixedHeader.classList.remove('scrolled');
+              fixedHeader.classList.remove("scrolled");
             }
           }
         });
       });
-      </script>
+    </script>
   </body>
 </html>
