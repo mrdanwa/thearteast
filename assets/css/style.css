@@ -519,7 +519,7 @@ p {
 
 /* Fixed header logo should be smaller */
 .fixed-header .logo {
-  width: 150px;
+  width: 180px;
 }
 
 /* Media Queries */
@@ -533,7 +533,7 @@ p {
   }
 
   .fixed-header .logo {
-    width: 130px;
+    width: 170px;
   }
 }
 
@@ -547,7 +547,7 @@ p {
   }
 
   .fixed-header .logo {
-    width: 120px;
+    width: 150px;
   }
 
   .fixed-header {
@@ -565,7 +565,7 @@ p {
   }
 
   .fixed-header .logo {
-    width: 100px;
+    width: 130px;
   }
 }
 
@@ -3138,10 +3138,6 @@ p.copyright {
 }
 
 @media screen and (max-width: 768px) {
-  .header img {
-    width: 160px;
-  }
-
   .big-title-sec .view-more a {
     margin: 5px 0;
   }
