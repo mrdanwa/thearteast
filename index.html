@@ -41,12 +41,19 @@
 
   <header class="header">
     <div class="container">
-      <a>
-        <img src="assets/images/logo.png" alt="Logo" />
+      <a class="logo-link">
+        <img src="assets/images/logo1.png" alt="Logo" class="logo" />
       </a>
     </div>
   </header>
 
+  <header class="fixed-header">
+    <div class="container">
+      <a class="logo-link">
+        <img src="assets/images/logo2.png" alt="Logo" class="logo" />
+      </a>
+    </div>
+  </header>
   <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -486,7 +493,7 @@
                   class="banner-image animated out"
                   data-animation="fadeInUp"
                 >
-                  <img src="assets/images/1.png" alt="Banner" />
+                  <img src="assets/images/logo3.png" alt="Banner" />
                 </div>
               </div>
             </div>
@@ -506,7 +513,9 @@
                 data-delay="0"
               >
                 <div class="section_header">
-                  <h2>Más que marketing. <span>Tu socio estratégico.</span></h2>
+                  <h2>
+                    Más que marketing. <span> TU SOCIO ESTRATÉGICO.</span>
+                  </h2>
                 </div>
                 <!-- End section_header -->
                 <p>
@@ -577,27 +586,6 @@
                       </div>
                     </div>
                   </li>
-
-                  <!-- feature -->
-                  <li>
-                    <div
-                      class="feature-app-box animated out"
-                      data-animation="fadeInLeft"
-                      data-delay="0"
-                    >
-                      <div class="app-feature-icon pull-left">
-                        <span class="pe-7s-lock"></span>
-                      </div>
-                      <div class="feature-app-box-content">
-                        <h6>Seguridad y Confianza</h6>
-                        <p>
-                          Transparencia y respeto por tu marca en cada decisión.
-                          Transparencia y respeto por tu marca en cada decisión.
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
               </div>
 
               <div
@@ -606,7 +594,7 @@
                 data-delay="0"
               >
                 <figure>
-                  <img src="assets/images/app/phone.png" alt="" width="65%" />
+                  <img src="assets/images/app/phone.jpg" alt="" width="65%" />
                 </figure>
               </div>
               <!-- End col-sm-8 -->
@@ -635,7 +623,7 @@
               >
                 <figure>
                   <img
-                    src="assets/images/temp/laptop.jpg"
+                    src="assets/images/screenshots/image.jpg"
                     alt="Portada"
                     width="55%"
                   />
@@ -700,73 +688,73 @@
                 >
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.png"
+                      <a class="zoom" href="assets/images/screenshots/1.jpg"
                         ><img
-                          src="assets/images/screenshots/1.png"
+                          src="assets/images/screenshots/1.jpg"
                           alt="Ejemplo 1"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/2.jpg"
                         ><img
-                          src="assets/images/screenshots/2.png"
+                          src="assets/images/screenshots/2.jpg"
                           alt="Ejemplo 2"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.png"
+                      <a class="zoom" href="assets/images/screenshots/3.jpg"
                         ><img
-                          src="assets/images/screenshots/1.png"
+                          src="assets/images/screenshots/3.jpg"
                           alt="Ejemplo 3"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/4.jpg"
                         ><img
-                          src="assets/images/screenshots/2.png"
+                          src="assets/images/screenshots/4.jpg"
                           alt="Ejemplo 4"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/5.jpg"
                         ><img
-                          src="assets/images/screenshots/2.png"
-                          alt="Ejemplo 4"
+                          src="assets/images/screenshots/5.jpg"
+                          alt="Ejemplo 5"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/6.jpg"
                         ><img
-                          src="assets/images/screenshots/2.png"
-                          alt="Ejemplo 4"
+                          src="assets/images/screenshots/6.jpg"
+                          alt="Ejemplo 6"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/7.png"
                         ><img
-                          src="assets/images/screenshots/2.png"
-                          alt="Ejemplo 4"
+                          src="assets/images/screenshots/7.png"
+                          alt="Ejemplo 7"
                       /></a>
                     </div>
                   </div>
                   <div class="shot">
                     <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.png"
+                      <a class="zoom" href="assets/images/screenshots/8.png"
                         ><img
-                          src="assets/images/screenshots/2.png"
-                          alt="Ejemplo 4"
+                          src="assets/images/screenshots/8.png"
+                          alt="Ejemplo 8"
                       /></a>
                     </div>
                   </div>
@@ -1142,16 +1130,16 @@
       <section>
         <div class="contact-info">
           <div class="container">
-            <div class="row">
+            <div class="row" style="display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 30px;
+              flex-wrap: wrap;
+            ">
               <div class="col-sm-4">
                 <a
                   ><i class="pe-7s-map-marker"></i> Shanghai / Madrid /
                   Mallorca</a
-                >
-              </div>
-              <div class="col-sm-4">
-                <a href="tel:+34685627683"
-                  ><i class="pe-7s-phone"></i> +34 685 627 683</a
                 >
               </div>
               <div class="col-sm-4">
@@ -1226,5 +1214,23 @@
     <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="assets/js/jquery.gmaps.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const fixedHeader = document.querySelector('.fixed-header');
+        const heroSection = document.querySelector('#hero-section');
+        
+        window.addEventListener('scroll', function() {
+          if (heroSection) {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            if (window.pageYOffset > heroBottom - 100) {
+              fixedHeader.classList.add('scrolled');
+            } else {
+              fixedHeader.classList.remove('scrolled');
+            }
+          }
+        });
+      });
+      </script>
   </body>
 </html>
