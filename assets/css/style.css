@@ -1692,6 +1692,7 @@ h4.post-title {
   height: calc(1.4em * 2);
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1707,6 +1708,7 @@ h4.post-title {
   height: calc(1.6em * 3);
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
