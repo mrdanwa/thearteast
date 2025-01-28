@@ -1108,7 +1108,7 @@ a:hover .overlay .overlay-inner span {
 /***********************************************************************************************/
 
 .clients-bg {
-  background: url("../images/hero-bg/landing.jpg") center top;
+  background: url("../images/temp/house.jpg") center top;
   position: relative;
   padding: 60px 0;
 }
@@ -1340,7 +1340,7 @@ span.percentfactor {
 }
 
 #banner-services {
-  background: url("../images/hero-bg/landing.jpg") center top;
+  background: url("../images/temp/house.jpg") center top;
   position: relative;
 }
 
@@ -1439,7 +1439,7 @@ span.percentfactor {
 ul.price-table {
   list-style-type: none;
   padding: 0px;
-  margin: 25px 20px;
+
   text-align: center;
   border: 1px solid var(--color-border);
 }
