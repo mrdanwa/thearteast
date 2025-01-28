@@ -4,6 +4,23 @@
     Released for free under the Creative Commons Attribution 3.0 license.
 */
 
+document.addEventListener("DOMContentLoaded", function () {
+  const fixedHeader = document.querySelector(".fixed-header");
+  const heroSection = document.querySelector("#hero-section");
+
+  window.addEventListener("scroll", function () {
+    if (heroSection) {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+
+      if (window.pageYOffset > heroBottom - 100) {
+        fixedHeader.classList.add("scrolled");
+      } else {
+        fixedHeader.classList.remove("scrolled");
+      }
+    }
+  });
+});
+
 (function ($) {
   "use strict";
 
