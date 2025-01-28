@@ -555,7 +555,7 @@ p {
   transition: all 0.3s ease;
   background-color: transparent;
   position: absolute;
-  left: 20px;
+  left: 60px;
 }
 
 .go-back-button i {
@@ -1847,7 +1847,6 @@ textarea.form-control {
 .contact-info a i {
   display: block;
   font-size: 30px;
-  margin-bottom: 15px;
 }
 
 /***********************************************************************************************/
