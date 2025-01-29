@@ -1430,6 +1430,10 @@ ul.price-table li {
   margin-bottom: 0;
 }
 
+.title-price {
+  font-size: 5px;
+}
+
 .price-table .price-box {
   padding: 30px;
   border-bottom: 1px solid var(--color-border);
