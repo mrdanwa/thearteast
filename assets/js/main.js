@@ -5,6 +5,42 @@
 */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger-menu");
+  const navMenu = document.querySelector(".nav-menu");
+  let overlay;
+
+  // Create overlay element
+  function createOverlay() {
+    overlay = document.createElement("div");
+    overlay.className = "nav-overlay";
+    document.body.appendChild(overlay);
+  }
+  createOverlay();
+
+  // Toggle menu
+  function toggleMenu() {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  }
+
+  // Event listeners
+  hamburger.addEventListener("click", toggleMenu);
+
+  // Close menu when clicking outside
+  overlay.addEventListener("click", function (e) {
+    if (navMenu.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
+
+  // Close menu when clicking on a nav link
+  const navLinks = document.querySelectorAll(".nav-menu a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleMenu);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const fixedHeader = document.querySelector(".fixed-header");
   const heroSection = document.querySelector("#hero-section");
 

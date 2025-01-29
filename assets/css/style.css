@@ -472,14 +472,14 @@ p {
 *************************************************************************/
 
 .header {
-  position: absolute;
-  top: 0;
+  position: fixed;
   left: 0;
   right: 0;
-  z-index: 1000;
-  padding: 40px 0;
+  z-index: 1200;
+  padding: 15px 0;
   text-align: center;
   transition: all 0.3s ease;
+  top: 0;
 }
 
 .fixed-header {
@@ -535,14 +535,6 @@ p {
   transition: all 0.3s ease;
 }
 
-.fixed-header .logo {
-  width: 180px;
-}
-
-.header-more .logo {
-  width: 180px;
-}
-
 .go-back-button {
   display: inline-flex;
   align-items: center;
@@ -578,14 +570,6 @@ p {
   .logo {
     width: 180px;
   }
-
-  .fixed-header .logo {
-    width: 170px;
-  }
-
-  .header-more .logo {
-    width: 170px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -607,16 +591,9 @@ p {
     width: 160px;
   }
 
-  .fixed-header .logo {
-    width: 150px;
-  }
-
-  .header-more .logo {
-    width: 150px;
-  }
-
   .fixed-header,
-  .header-more {
+  .header-more,
+  .header {
     padding: 10px 0;
   }
 }
@@ -628,14 +605,6 @@ p {
 
   .logo {
     width: 140px;
-  }
-
-  .fixed-header .logo {
-    width: 130px;
-  }
-
-  .header-more .logo {
-    width: 130px;
   }
 
   .go-back-button {
@@ -1340,7 +1309,7 @@ span.percentfactor {
 }
 
 #banner-services {
-  background: url("../images/temp/house.jpg") center top;
+  background: url("../images/temp/temple.jpg") center top;
   position: relative;
 }
 
@@ -3187,16 +3156,35 @@ ul.footer-social-links li:first-child {
 ul.footer-social-links li a {
   font-size: 15px;
   color: var(--color-gray-4);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-transform: uppercase;
   position: relative;
+  text-decoration: none;
 }
 
+/* Social Icons */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  fill: var(--color-gray-4);
+  transition: all 0.3s ease;
+}
+
+ul.footer-social-links li a:hover .social-icon {
+  fill: var(--color-accent2);
+}
+
+/* Text underline effect */
 ul.footer-social-links li a:after {
   content: "";
   display: block;
+  position: absolute;
   left: 0;
   right: 0;
+  bottom: -5px;
   height: 1px;
   background: var(--color-accent2);
   opacity: 0;
@@ -3223,6 +3211,17 @@ ul.footer-social-links li a:hover:after {
 
 p.copyright {
   padding-top: 40px;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /***********************************************************************************************/
@@ -3626,6 +3625,7 @@ p.copyright {
 
 .article {
   background-color: #fff;
+  padding-bottom: 1px;
 }
 
 @media (max-width: 768px) {
@@ -3643,5 +3643,95 @@ p.copyright {
 
   .article-content {
     font-size: 1em;
+  }
+}
+
+/***********************************************************************************************/
+/* =Navigation */
+/***********************************************************************************************/
+
+.hamburger-menu {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  z-index: 1000;
+  padding-top: 80px;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  padding: 15px 30px;
+}
+
+.nav-menu ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  color: #bf1363;
+}
+
+/* Overlay styles */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    width: 250px;
+    right: -250px;
+  }
+  .hamburger-menu {
+    right: 30px;
   }
 }
