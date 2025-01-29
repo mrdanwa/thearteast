@@ -2066,6 +2066,17 @@ ul.features-list li {
   text-transform: capitalize;
 }
 
+@media (min-width: 768px) {
+  #features-app-section-2 .row {
+    display: flex;
+    align-items: center; /* Centrado vertical solo en pantallas grandes */
+  }
+  #creative-section-1 .row {
+    display: flex;
+    align-items: center; /* Centrado vertical solo en pantallas grandes */
+  }
+}
+
 #creative-section-1 p,
 #creative-section-2 p,
 #features-app-section-1 p {
