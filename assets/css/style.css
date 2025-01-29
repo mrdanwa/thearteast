@@ -1309,8 +1309,9 @@ span.percentfactor {
 }
 
 #banner-services {
-  background: url("../images/temp/temple.jpg") center top;
+  background: url("../images/temp/temple.jpeg") center top;
   position: relative;
+  background-size: cover;
 }
 
 #banner-services:before {
