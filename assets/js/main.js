@@ -480,6 +480,8 @@ document.addEventListener("DOMContentLoaded", function () {
       items: 5,
       itemsDesktop: [1199, 3],
       itemsDesktopSmall: [979, 3],
+      loop: true,
+      rewind: false,
     });
   });
 
