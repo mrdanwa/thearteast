@@ -617,6 +617,54 @@ p {
   }
 }
 
+.privacy-policy-container {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.privacy-button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.privacy-button:hover {
+  color: #007bff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  .privacy-policy-container {
+    bottom: 20px;
+    padding: 8px;
+  }
+
+  .privacy-button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .privacy-policy-container {
+    bottom: 15px;
+    padding: 6px;
+  }
+
+  .privacy-button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
 /***********************************************************************************************/
 /* =Hero section */
 /***********************************************************************************************/
