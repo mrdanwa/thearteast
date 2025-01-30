@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $("#alert").hide();
         $("#submit")
           .after(
-            '<img src="../images/ajax-loader.GIF" class="contactloader" />'
+            '<img src="../images/temp/loading.GIF" class="contactloader" />'
           )
           .attr("disabled", "disabled");
 
