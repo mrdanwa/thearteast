@@ -3698,6 +3698,10 @@ p.copyright {
   font-weight: 500;
 }
 
+.article-content li {
+  margin-bottom: 15px;
+}
+
 .article-image {
   height: auto;
   margin: 30px auto;
