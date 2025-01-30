@@ -101,14 +101,19 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ==============================================
            5. Hero Slider (bxSlider)
          ============================================== */
-    $(".caption-slides").bxSlider({
-      pager: true,
-      mode: "fade",
-      adaptiveHeight: true,
-      controls: false,
-      auto: true,
-      speed: 1000,
-      pause: 5000,
+    $(document).ready(function () {
+      var slider = $(".caption-slides").bxSlider({
+        pager: true,
+        mode: "fade",
+        adaptiveHeight: true,
+        controls: false,
+        auto: true,
+        speed: 1000,
+        pause: 5000,
+        onSlideAfter: function () {
+          slider.startAuto(); // Restart autoplay after interaction
+        },
+      });
     });
 
     /* ==============================================
