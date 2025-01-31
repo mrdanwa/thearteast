@@ -3744,7 +3744,7 @@ p.copyright {
   margin: 0 auto;
 }
 
-.column {
+.column2 {
   /* Default for mobile: single column */
   column-count: 1;
   column-gap: 40px;
@@ -3753,29 +3753,59 @@ p.copyright {
 
 /* For larger screens (tablets and up), switch to two columns */
 @media (min-width: 825px) {
-  .column {
-    column-count: 3;
+  .column2 {
+    column-count: 2;
     column-gap: 40px;
   }
 
   /* Prevent paragraphs from breaking across columns */
-  .column p {
+  .column2 p {
     break-inside: avoid-column;
     margin-bottom: 20px;
   }
 }
 
 /* Additional styles to ensure proper spacing and readability */
-.column p:first-child {
+.column2 p:first-child {
   margin-top: 0;
 }
 
-.column p:last-child {
+.column2 p:last-child {
+  margin-bottom: 0;
+}
+
+.column3 {
+  /* Default for mobile: single column */
+  column-count: 1;
+  column-gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* For larger screens (tablets and up), switch to two columns */
+@media (min-width: 825px) {
+  .column3 {
+    column-count: 3;
+    column-gap: 40px;
+  }
+
+  /* Prevent paragraphs from breaking across columns */
+  .column3 p {
+    break-inside: avoid-column;
+    margin-bottom: 20px;
+  }
+}
+
+/* Additional styles to ensure proper spacing and readability */
+.column3 p:first-child {
+  margin-top: 0;
+}
+
+.column3 p:last-child {
   margin-bottom: 0;
 }
 
 /* Ensure proper clearing after columns */
-.column::after {
+.column3::after {
   content: "";
   display: table;
   clear: both;
