@@ -27,7 +27,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Configure mail settings
-$to       = 'youremail@example.com'; // <--- Replace with your email
+$to       = 'in@thearteast.es'; // <--- Replace with your email
 $subject  = 'Nuevo mensaje desde la página web';
 $headers  = "From: $name <$email>\r\n";
 $headers .= "Reply-To: $email\r\n";
