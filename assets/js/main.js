@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".mailchimp").ajaxChimp({
       callback: mailchimpStatus,
       // Replace with your own MailChimp post URL
-      url: "https://gmail.us16.list-manage.com/subscribe/post?u=40cf8e5931e46c5292975c6fc&amp;id=51db06274c&amp;f_id=00c1c2e1f0",
+      url: "https://gmail.us15.list-manage.com/subscribe/post?u=963ba2580ad7d9c1bba2255a1&amp;id=dc75e8a134&amp;f_id=0048eee1f0",
     });
 
     function mailchimpStatus(resp) {
