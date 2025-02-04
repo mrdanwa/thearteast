@@ -205,12 +205,14 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     /* ==============================================
-           12. MailChimp AJAX subscription
+           12. Mail subscription
          ============================================== */
+
+    //MailChimp AJAX subscription
     $(".mailchimp").ajaxChimp({
       callback: mailchimpStatus,
       // Replace with your own MailChimp post URL
-      url: "https://gmail.us15.list-manage.com/subscribe/post?u=963ba2580ad7d9c1bba2255a1&amp;id=dc75e8a134&amp;f_id=0048eee1f0",
+      url: "",
     });
 
     function mailchimpStatus(resp) {
@@ -226,6 +228,50 @@ document.addEventListener("DOMContentLoaded", function () {
         $(".subscription-success").fadeOut(500);
       }
     }
+
+    // MailerLite Subscription Form Handler
+    $(document).ready(function () {
+      $(".mailerlite-form").submit(function (e) {
+        e.preventDefault();
+
+        const email = $(this).find('input[name="EMAIL"]').val();
+        const apiKey =
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNTU0MjA3YzQ0YjNlM2MyNzM4ODIxZWRjYTFhODQ5OGMwZTJkZDliOTRiOGZkYTU1NDBjYmFmMzJlNjczYTJkOTU1Y2I5OTJjODhhYmMxZTgiLCJpYXQiOjE3Mzg2ODg2MzkuODk3MDc2LCJuYmYiOjE3Mzg2ODg2MzkuODk3MDgsImV4cCI6NDg5NDM2MjIzOS44OTIwOTIsInN1YiI6IjEzMjY2NDAiLCJzY29wZXMiOltdfQ.N8QNF6zPupPHwH86JZMc4ylvIKO1vx5Ch4LtGuOGlZBFSNS1NNJZGJhyx3HUxlh-fuwmCZX1CNYiPVwtea-a5oAiFVr3nErdWf-bqTlJ3h300fAlpKZ9Y-8VLALigY0-PVGss-tGPiuhUrjF8bXTPPrulx6abGR1ESJmFCx94eYpy8FNeeI5QhS0zK9TAFHIyeoVGmbhnwhRc8WN7meQ_Bqml_ypqsT0Jvw0msPTLPgF6ewTgFM286ry9hnLFIqirmMc3n6UwFh5iEXbCdH51gFKtaoQE1w0mnVaYUdEElcqnacU-NXIktHbWHFIy5Inbq39BnAKYd0AyiFT2DU9Ms1YcfnpQyTKWGWiITvO7RPN2td_rAZ61dAqqTBMU9WIOM1TLJ6TltnC8Vj0jHSnMscWdGDZ0Dy-trLsCqXFflNSs1_5GbtN-mQ7bDF8uQBLfG5N0NbvA-WHJif7XO4Gj98K-gIfmw8LIpuFhCgfinDLmKa26TXIOzrflUOSSfNDEFTl97kVQz46ZAOq9QNDa3PExA1MEy82arXgb_5tB9HmX68o36LiFHb4Xo83pbbG8MfF1AR5snsjrR55_K3EYBrOrIJDy7vuxrgPNBsF6HgB7FVKXj8FvDz9H6yiMfsIToLtHEdG5xymOI63smoNDtA0_SDcgKE65-0zL6Fa0B0";
+        const groupId = "145425418667689859";
+
+        $.ajax({
+          url: "https://connect.mailerlite.com/api/subscribers",
+          type: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          data: JSON.stringify({
+            email: email,
+            groups: [groupId],
+          }),
+          success: function (response) {
+            $(".subscription-success")
+              .html('<span class="icon-happy"></span><br/>¡Suscrito!')
+              .fadeIn(1000);
+            $(".subscription-error").fadeOut(500);
+          },
+          error: function (xhr, status, error) {
+            let errorMessage =
+              "Ha ocurrido un error. Por favor, inténtalo de nuevo.";
+            if (xhr.responseJSON && xhr.responseJSON.message) {
+              errorMessage = xhr.responseJSON.message;
+            }
+
+            $(".subscription-error")
+              .html(`<span class="icon-sad"></span><br/>${errorMessage}`)
+              .fadeIn(1000);
+            $(".subscription-success").fadeOut(500);
+          },
+        });
+      });
+    });
 
     /* ==============================================
            13. Contact Form AJAX
