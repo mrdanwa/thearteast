@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recibimos y sanitizamos datos del formulario
     $nombre   = isset($_POST['name'])    ? strip_tags(trim($_POST['name'])) : "";
     $correo   = isset($_POST['email'])   ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : "";
-    $telefono = isset($_POST['phone'])   ? strip_tags(trim($_POST['phone'])) : "No proporcionado"; 
+    $telefono = isset($_POST['phone'])   ? strip_tags(trim($_POST['phone'])) : ""; 
     $mensaje  = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : "";
 
     // Validación básica
