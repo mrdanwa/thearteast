@@ -7,12 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recibimos y sanitizamos datos del formulario
     $nombre   = isset($_POST['name'])    ? strip_tags(trim($_POST['name'])) : "";
     $correo   = isset($_POST['email'])   ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : "";
+    $telefono = isset($_POST['phone'])   ? strip_tags(trim($_POST['phone'])) : "No proporcionado"; 
     $mensaje  = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : "";
 
     // Validación básica
     if ($nombre === "" || $correo === "" || $mensaje === "") {
-        // Algún campo vacío
-        echo "<div class='alert alert-danger'>Por favor, completa todos los campos antes de enviar.</div>";
+        echo "<div class='alert alert-danger'>Por favor, completa todos los campos obligatorios antes de enviar.</div>";
         exit;
     }
 
@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cuerpo = "Has recibido un nuevo mensaje de contacto.\n\n";
     $cuerpo .= "Nombre: $nombre\n";
     $cuerpo .= "Email: $correo\n";
+    $cuerpo .= "Teléfono: $telefono\n"; // Add phone to the email body
     $cuerpo .= "Mensaje:\n$mensaje\n";
 
     // Cabeceras para el correo (From y Reply-To)

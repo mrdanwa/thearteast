@@ -234,24 +234,18 @@ document.addEventListener("DOMContentLoaded", function () {
       var formAction = $(this).attr("action");
       $("#alert").slideUp(750, function () {
         $("#alert").hide();
-        $("#submit")
-          .after(
-            '<img src="assets/images/temp/load.gif" class="contactloader" style="width: 3%"/>'
-          )
-          .attr("disabled", "disabled");
+        $("#submit").attr("disabled", "disabled");
 
         $.post(
           formAction,
           {
             name: $("#name").val(),
             email: $("#email").val(),
+            phone: $("#phone").val(),
             message: $("#message").val(),
           },
           function (response) {
             $("#alert").html(response).slideDown("slow");
-            $("#contactform img.contactloader").fadeOut("slow", function () {
-              $(this).remove();
-            });
             $("#submit").removeAttr("disabled");
             if (response.match("success") !== null) {
               $("#name").val("");
