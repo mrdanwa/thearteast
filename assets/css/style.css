@@ -454,7 +454,7 @@ p {
 }
 
 #loading-animation {
-  background-image: url("../images/temp/loading.GIF");
+  background-image: url("../images/temp/loading.gif");
   opacity: 0.7;
   background-position: center center;
   background-repeat: no-repeat;

@@ -1,46 +1,49 @@
 <?php
-/**
- * contact.php
- * Processes the AJAX contact form submission and returns a response.
- */
+// Aseguramos que se reciban los datos vía POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Configura aquí tu dirección de correo:
+    $destinatario = "in@thearteast.es";
 
-// Ensure the request method is POST
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo 'Método de solicitud inválido.';
-    exit;
-}
+    // Recibimos y sanitizamos datos del formulario
+    $nombre   = isset($_POST['name'])    ? strip_tags(trim($_POST['name'])) : "";
+    $correo   = isset($_POST['email'])   ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : "";
+    $mensaje  = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : "";
 
-// Retrieve form fields
-$name    = isset($_POST['name']) ? trim($_POST['name']) : '';
-$email   = isset($_POST['email']) ? trim($_POST['email']) : '';
-$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+    // Validación básica
+    if ($nombre === "" || $correo === "" || $mensaje === "") {
+        // Algún campo vacío
+        echo "<div class='alert alert-danger'>Por favor, completa todos los campos antes de enviar. error</div>";
+        exit;
+    }
 
-// Basic validation
-if (empty($name) || empty($email) || empty($message)) {
-    echo 'Por favor, completa todos los campos antes de enviar.';
-    exit;
-}
+    // Opcional: validar formato de email
+    if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+        echo "<div class='alert alert-danger'>El formato de correo no es válido. error</div>";
+        exit;
+    }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo 'Por favor, ingresa un correo electrónico válido.';
-    exit;
-}
+    // Construimos el asunto y el cuerpo del mensaje
+    $asunto = "Nuevo mensaje desde The Arteast Agency";
+    $cuerpo = "Has recibido un nuevo mensaje de contacto.\n\n";
+    $cuerpo .= "Nombre: $nombre\n";
+    $cuerpo .= "Email: $correo\n";
+    $cuerpo .= "Mensaje:\n$mensaje\n";
 
-// Configure mail settings
-$to       = 'in@thearteast.es'; // <--- Replace with your email
-$subject  = 'Nuevo mensaje desde la página web';
-$headers  = "From: $name <$email>\r\n";
-$headers .= "Reply-To: $email\r\n";
-$body     = "Has recibido un nuevo mensaje desde tu formulario de contacto:\n\n"
-          . "Nombre: $name\n"
-          . "Email: $email\n"
-          . "Mensaje:\n$message\n";
+    // Cabeceras para el correo (From y Reply-To)
+    $cabeceras  = "From: The Arteast Agency <no-reply@thearteast.es>\r\n";
+    $cabeceras .= "Reply-To: $correo\r\n";
+    $cabeceras .= "Content-type: text/plain; charset=UTF-8\r\n";
 
-// Attempt to send the email
-if (@mail($to, $subject, $body, $headers)) {
-    // Include the word "success" so the AJAX script can detect success
-    echo '¡Tu mensaje ha sido enviado con éxito! Pronto nos pondremos en contacto contigo.';
+    // Enviamos el email
+    $mailEnviado = mail($destinatario, $asunto, $cuerpo, $cabeceras);
+
+    // Comprobamos si se envió correctamente
+    if ($mailEnviado) {
+        echo "<div class='alert alert-success'>¡Tu mensaje se ha enviado correctamente! success</div>";
+    } else {
+        echo "<div class='alert alert-danger'>Hubo un error al enviar tu mensaje. error</div>";
+    }
 } else {
-    echo 'Lo sentimos, ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.';
+    echo "<div class='alert alert-danger'>Acceso no válido. error</div>";
 }
-
+?>

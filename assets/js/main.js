@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".mailchimp").ajaxChimp({
       callback: mailchimpStatus,
       // Replace with your own MailChimp post URL
-      url: "http://YOUR-OWN-MAILCHIMP-URL-HERE",
+      url: "https://gmail.us16.list-manage.com/subscribe/post?u=40cf8e5931e46c5292975c6fc&amp;id=51db06274c&amp;f_id=00c1c2e1f0",
     });
 
     function mailchimpStatus(resp) {
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $("#alert").hide();
         $("#submit")
           .after(
-            '<img src="../images/temp/loading.GIF" class="contactloader" />'
+            '<img src="assets/images/temp/load.gif" class="contactloader" style="width: 3%"/>'
           )
           .attr("disabled", "disabled");
 
