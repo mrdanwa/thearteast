@@ -1,6 +1,31 @@
 <?php
+// At the very top of the file
+header('Access-Control-Allow-Origin: *'); // Or specific domain
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+header('Access-Control-Allow-Headers: Cookie, X-Requested-With');
+header('Access-Control-Allow-Credentials: true');
+
+// Handle preflight
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    header('Access-Control-Allow-Credentials: true');
+}
+
 // Aseguramos que se reciban los datos vía POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || 
+    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+    http_response_code(403);
+    exit('Acceso directo no permitido');
+}
+
     // Configura aquí tu dirección de correo:
     $destinatario = "in@thearteast.es";
 

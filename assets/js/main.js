@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
          ============================================== */
     $("#contactform").on("submit", function () {
       var formAction = $(this).attr("action");
+      document.cookie = "humans_21909=1; path=/";
       $("#alert").slideUp(750, function () {
         $("#alert").hide();
         $("#submit").attr("disabled", "disabled");
