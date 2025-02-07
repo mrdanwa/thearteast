@@ -2,8 +2,7 @@
 // At the very top of the file
 header('Access-Control-Allow-Origin: *'); // Or specific domain
 header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
-header('Access-Control-Allow-Headers: Cookie, X-Requested-With');
+header('Access-Control-Allow-Headers: Content-Type, X-Requested-With, Cookie');
 header('Access-Control-Allow-Credentials: true');
 
 // Handle preflight
@@ -57,7 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Cabeceras para el correo (From y Reply-To)
     $cabeceras  = "From: The Arteast Agency <no-reply@thearteast.es>\r\n";
-    $cabeceras .= "Reply-To: $correo\r\n";
+    $correo = filter_var($correo, FILTER_VALIDATE_EMAIL); // Ensure valid email
+    if (!$correo) {
+        exit("<div class='alert alert-danger'>Correo inválido.</div>");
+    }
+    
     $cabeceras .= "Content-type: text/plain; charset=UTF-8\r\n";
 
     // Enviamos el email
