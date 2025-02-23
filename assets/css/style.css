@@ -690,7 +690,7 @@ p {
 }
 
 .home-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -710,7 +710,7 @@ p {
 }
 
 .home-hero-2 {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -730,7 +730,7 @@ p {
 }
 
 .home-hero-3 {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -750,7 +750,7 @@ p {
 }
 
 .home-hero-4 {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -847,7 +847,7 @@ ul.caption-slides li {
 /***********************************************************************************************/
 
 .about-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -1191,7 +1191,7 @@ a:hover .overlay .overlay-inner span {
 /***********************************************************************************************/
 
 #statistic-section {
-  background: url("../images/hero-bg/landing.jpg") center top;
+  background: url("../images/temp/landing.jpg") center top;
   position: relative;
   text-align: center;
   padding-top: 70px;
@@ -1350,7 +1350,7 @@ span.percentfactor {
 /***********************************************************************************************/
 
 .services-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -1540,7 +1540,7 @@ ul.price-table li .btn {
 /***********************************************************************************************/
 
 .portfolio-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -1916,7 +1916,7 @@ textarea.form-control {
 #project-head-section {
   padding: 80px 0;
   position: relative;
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
 }
 
 #project-head-section:before {
@@ -2078,7 +2078,7 @@ ul.details-list li:last-child {
 }
 
 .landing-hero {
-  background: url("../images/hero-bg/image.png");
+  background: url("../images/temp/image.png");
   background-size: cover;
 }
 
@@ -2434,7 +2434,7 @@ ul.testimonials-slider li p {
 
 #blog-head {
   position: relative;
-  background: url("../images/hero-bg/landing.jpg") center top;
+  background: url("../images/temp/landing.jpg") center top;
   padding: 80px 0 !important;
 }
 
@@ -2878,7 +2878,7 @@ label {
 /***********************************************************************************************/
 
 .app-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -2969,7 +2969,7 @@ ul.features-app-list li {
 }
 
 #perfect-section {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
   padding: 80px 0;
   position: relative;
@@ -3015,7 +3015,7 @@ ul.features-app-list li {
   position: relative;
   padding: 60px;
   background-size: cover;
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
 }
 
 #download-section:before {
@@ -3091,7 +3091,7 @@ ul.download li a img {
 /***********************************************************************************************/
 
 .soon-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
@@ -3145,7 +3145,7 @@ ul.download li a img {
 /***********************************************************************************************/
 
 .personal-hero {
-  background: url("../images/hero-bg/landing.jpg");
+  background: url("../images/temp/landing.jpg");
   background-size: cover;
 }
 
