@@ -622,6 +622,7 @@ p {
   right: 0;
   text-align: center;
   padding: 10px;
+  width: 100%;
 }
 
 .privacy-button {
@@ -638,8 +639,22 @@ p {
   color: #bf1363;
 }
 
-/* Media Queries */
+/* Media Queries for responsive behavior */
+@media screen and (max-height: 500px) {
+  /* For very short screens, make it static positioned instead of absolute */
+  .privacy-policy-container {
+    position: static;
+    margin-top: 20px;
+    padding: 8px;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  .nav-menu {
+    padding-bottom: 70px; /* Add padding at the bottom to ensure content doesn't overlap with privacy button */
+    overflow-y: auto; /* Allow scrolling if menu items don't fit */
+  }
+
   .privacy-policy-container {
     bottom: 20px;
     padding: 8px;
