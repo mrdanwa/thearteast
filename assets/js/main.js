@@ -277,63 +277,32 @@ document.addEventListener("DOMContentLoaded", function () {
            13. Contact Form AJAX
          ============================================== */
     $("#contactform").on("submit", function () {
-      var formAction = "https://thearteast.es/assets/php/contact.php";
-
-      // Set cookie
+      var formAction = $(this).attr("action");
       document.cookie = "humans_21909=1; path=/";
-
-      // Hide any existing alerts and disable submit button
       $("#alert").slideUp(750, function () {
         $("#alert").hide();
         $("#submit").attr("disabled", "disabled");
 
-        // Prepare form data
-        const formData = {
-          name: $("#name").val(),
-          email: $("#email").val(),
-          phone: $("#phone").val(),
-          message: $("#message").val(),
-        };
-
-        // Make cross-origin AJAX request
-        $.ajax({
-          url: formAction,
-          type: "POST",
-          data: formData,
-          xhrFields: {
-            withCredentials: true, // Send cookies with the request
+        $.post(
+          formAction,
+          {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val(),
+            message: $("#message").val(),
           },
-          headers: {
-            "X-Requested-With": "XMLHttpRequest", // Required by your PHP script
-          },
-          success: function (response) {
-            // Display the response message
+          function (response) {
             $("#alert").html(response).slideDown("slow");
             $("#submit").removeAttr("disabled");
-
-            // If successful, clear the form
             if (response.match("success") !== null) {
               $("#name").val("");
               $("#email").val("");
-              $("#phone").val("");
               $("#message").val("");
             }
-          },
-          error: function (xhr, status, error) {
-            // Handle errors
-            $("#alert")
-              .html(
-                "<div class='alert alert-danger'>Error al enviar: " +
-                  error +
-                  "</div>"
-              )
-              .slideDown("slow");
-            $("#submit").removeAttr("disabled");
-          },
-        });
+          }
+        );
       });
-
-      return false; // Prevent default form submission
+      return false;
     });
 
     /* ==============================================
