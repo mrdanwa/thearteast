@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         ],
       });
-      var iconImage = new google.maps.MarkerImage("../images/map-icon.png");
+      var iconImage = new google.maps.MarkerImage("../images/map-icon.webp");
       mapInstance.addMarker({
         position: coordinates,
         icon: iconImage,
